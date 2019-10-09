@@ -63,87 +63,7 @@
     </div>
 		
 		<section class="ftco-section ftco-degree-bg">
-      <div class="container">
-        <div class="row">
-        	<div class="col-lg-3 sidebar">
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Find City</h3>
-        			<form action="#">
-        				<div class="fields">
-		              <div class="form-group">
-		                <input type="text" class="form-control" placeholder="Destination, City">
-		              </div>
-		              <div class="form-group">
-		                <div class="select-wrap one-third">
-	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control" placeholder="Keyword search">
-	                       <option value="">Select Location</option>
-	                      <option value="">Kochi</option>
-	                      <option value="">Kozhikode</option>
-	                      <option value="">Trivandrum</option>
-	                      <option value="">Idukki</option>
-	                    </select>
-	                  </div>
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control" placeholder="Date from">
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control" placeholder="Date to">
-		              </div>
-		              <div class="form-group">
-		              	<div class="range-slider">
-		              		<span>
-										    <input type="number" value="25000" min="0" max="120000"/>	-
-										    <input type="number" value="50000" min="0" max="120000"/>
-										  </span>
-										  <input value="1000" min="0" max="120000" step="500" type="range"/>
-										  <input value="50000" min="0" max="120000" step="500" type="range"/>
-										  </svg>
-										</div>
-		              </div>
-		              <div class="form-group">
-		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-		              </div>
-		            </div>
-	            </form>
-        		</div>
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Star Rating</h3>
-        			<form method="post" class="star-rating">
-							  <div class="form-check">
-									<input type="checkbox" class="form-check-input" id="exampleCheck1">
-									<label class="form-check-label" for="exampleCheck1">
-										<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></span></p>
-									</label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						    	   <p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						     </label>
-							  </div>
-							  <div class="form-check">
-							    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-						      </label>
-							  </div>
-							  <div class="form-check">
-						      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-						      <label class="form-check-label" for="exampleCheck1">
-						      	<p class="rate"><span><i class="icon-star"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i><i class="icon-star-o"></i></span></p>
-							    </label>
-							  </div>
-							</form>
-        		</div>
-          </div>
+    
           <div class="col-lg-9">
           	<div class="row">
           		<div class="col-md-12 ftco-animate">
@@ -293,33 +213,34 @@
           		</div>
           		<div class="col-md-12 hotel-single ftco-animate mb-5 mt-4">
           			<h4 class="mb-5">Check Availability &amp; Booking</h4>
+          			<form action="Bookings_Store.jsp">
           			<div class="fields">
           				<div class="row">
-          					<div class="col-md-6">
+			              <div class="col-md-6">
 				              <div class="form-group">
-				                <input type="text" class="form-control" placeholder="Name">
+				                <input type="hidden" class="form-control checkin_date" value="Forest Cannopy Hotel" name="place" placeholder="Date from">
+				              </div>
+			              </div>
+						  <div class="col-md-6">
+				              <div class="form-group">
+				                <input type="hidden" class="form-control checkin_date" value="6000" name="price" placeholder="Date from">
 				              </div>
 			              </div>
 			              <div class="col-md-6">
 				              <div class="form-group">
-				                <input type="text" class="form-control" placeholder="Email">
+				                <input type="text" class="form-control checkin_date" name="date_from" placeholder="Date from" required="">
 				              </div>
 			              </div>
 			              <div class="col-md-6">
 				              <div class="form-group">
-				                <input type="text" class="form-control checkin_date" placeholder="Date from">
-				              </div>
-			              </div>
-			              <div class="col-md-6">
-				              <div class="form-group">
-				                <input type="text" class="form-control checkout_date" placeholder="Date to">
+				                <input type="text" class="form-control checkout_date" name="date_to" placeholder="Date to" required="">
 				              </div>
 				            </div>
 				            <div class="col-md-6">
 					            <div class="form-group">
 				                <div class="select-wrap one-third">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-			                    <select name="" id="" class="form-control" placeholder="Guest">
+			                    <select name="member" id="" class="form-control" placeholder="Guest" required="">
 			                      <option value="0">Guest</option>
 			                      <option value="1">1</option>
 			                      <option value="2">2</option>
@@ -333,7 +254,7 @@
 					            <div class="form-group">
 				                <div class="select-wrap one-third">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-			                    <select name="" id="" class="form-control" placeholder="Children">
+			                    <select name="" id="" class="form-control" placeholder="Children" required="">
 			                      <option value="0">Children</option>
 			                      <option value="1">1</option>
 			                      <option value="2">2</option>
@@ -345,9 +266,13 @@
 			              </div>
 				            <div class="col-md-12">
 				              <div class="form-group">
-				                <input type="submit" value="Check Availability" class="btn btn-primary py-3">
+				                <input type="submit" value="Book" class="btn btn-primary py-3">
 				              </div>
 			              </div>
+		              </div>
+		            </div>
+		            </form>
+			             
 		              </div>
 		            </div>
           		</div>

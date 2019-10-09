@@ -1,14 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ page language="java" %>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Cookie Input Form</title>
 </head>
 <body>
+<form method="post" action="cookie_test2.jsp">
+<p><b>Enter Your Name: </b><input type="text" name="username"><br>
+<input type="submit" value="Submit">
 
-<A HREF="cookie_test2.jsp">Continue</A>
-Hello, <%= session.getAttribute( "theName" ) %>
+</form>
+
 </body>
-</html>

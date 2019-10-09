@@ -47,7 +47,7 @@
 	            <li class="nav-item"><a href="Customize_Package_AboutUs.jsp" class="nav-link">About</a></li>
 	            <li class="nav-item"><a href="Customize_Package_Contact.jsp" class="nav-link">Contact</a></li>
 			    <li class="nav-item"><a href="Customize_Package_Profile.jsp" class="nav-link">Hello, <%= session.getAttribute( "theName" ) %></a></li>
-	        <li class="nav-item "><a href="Login_Page.html" class="nav-link">Logout</a></li></ul>
+	        </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -702,6 +702,7 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script>alert("Thank you for you valuable feedback.")</script>
     
   </body>
 </html>

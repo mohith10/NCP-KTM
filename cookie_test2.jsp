@@ -1,14 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ page language="java" import="java.util.*"%>
+<%
+String username=request.getParameter("username");
+if(username==null) username="";
+
+
+Date now = new Date();
+String timestamp = now.toString();
+Cookie cookie = new Cookie ("username",username);
+cookie.setMaxAge(365 * 24 * 60 * 60);
+response.addCookie(cookie);
+
+%>
+
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Cookie Saved</title>
 </head>
 <body>
+<p><a href="cookie_test3.jsp">Next Page to view the cookie value</a><p>
 
-<A HREF="NextPage.jsp">Continue</A>
-Hello, <%= session.getAttribute( "theName" ) %>
 </body>
-</html>

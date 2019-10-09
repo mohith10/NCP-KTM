@@ -200,7 +200,7 @@ window.onclick = function(event) {
 				  <td><%=rs.getString("date_from") %></td>
 				  <td><%=rs.getString("date_to") %></td>
 				  <td><%=rs.getString("members") %></td>
-				  <td><%=rs.getString("price") %></td>
+				   <td><%=rs.getString("price") %></td>
 				  </tr>
 				  <%
 						}
@@ -212,47 +212,6 @@ window.onclick = function(event) {
               			
 					
 				</table>
-			
-				<form action="Customize_Package_Profile_Payment.jsp">
-						<div class="form-group">
-              					<div class="form-field">
-              	<%@ page import="java.util.Date" %>
-				<%@ page import="java.text.SimpleDateFormat" %>
-              	<%
-				try{
-				String name=(String)session.getAttribute( "theName" );
-            	name = name.substring(0, 1).toUpperCase() + name.substring(1);
-                String url = "jdbc:mysql://localhost:3306/ktmdatabase" ;
-                String username = "root" ;
-                String password = "root" ; 
-                int flag=0;
-                String query="select sum(price) as sum from booking where username='"+name+"' and buy="+flag+"";
-              
-                Class.forName("com.mysql.jdbc.Driver");
-                Connection con = DriverManager.getConnection(url,username,password);
-                Statement st = con.createStatement() ;
-                ResultSet rs=st.executeQuery(query);
-                
-                rs.next();
-                String res=rs.getString("sum");
-				
-				Date now = new Date();
-				String timestamp = now.toString();
-				Cookie cookie = new Cookie ("price",res);
-				cookie.setMaxAge(365 * 24 * 60 * 60);
-				response.addCookie(cookie);
-					
-							%>
-					                <input type="submit" value= "Pay Rs. <%=rs.getString("sum") %> " class="form-control btn btn-primary">
-					              <%
-						con.close();
-							} catch (Exception e) {
-									e.printStackTrace();
-									}
-												%>
-												</div>
-				              </div>
-					  </form>
             </div>
 	
               		
@@ -281,9 +240,9 @@ window.onclick = function(event) {
 		             	name = name.substring(0, 1).toUpperCase() + name.substring(1);
               	 		int flag2=1;
               	 		String url = "jdbc:mysql://localhost:3306/ktmdatabase" ;
-              	 		String username = "root" ;
-              	 		String password = "root" ; 
-                         String query2="select place, date_from, date_to, members, price from booking where username='"+name+"' and buy="+flag2+"";
+                        String username = "root" ;
+                        String password = "root" ; 
+                        String query2="select place, date_from, date_to, members, price from booking where username='"+name+"' and buy="+flag2+"";
                       
                         Class.forName("com.mysql.jdbc.Driver");
                         Connection con = DriverManager.getConnection(url,username,password);
@@ -472,6 +431,6 @@ window.onclick = function(event) {
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-    
+   <script> alert("Succesfully made all the changes !")</script>
   </body>
 </html>

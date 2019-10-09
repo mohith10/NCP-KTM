@@ -44,7 +44,7 @@
 	            <li class="nav-item active"><a href="Customize_Package_AboutUs.jsp" class="nav-link">About</a></li>
 	            <li class="nav-item"><a href="Customize_Package_Contact.jsp" class="nav-link">Contact</a></li>
 			    <li class="nav-item"><a href="Customize_Package_Profile.jsp" class="nav-link">Hello, <%= session.getAttribute( "theName" ) %></a></li>
-	        </ul>
+	        <li class="nav-item "><a href="Login_Page.html" class="nav-link">Logout</a></li> </ul>
 	      </div>
 	    </div>
 	  </nav>

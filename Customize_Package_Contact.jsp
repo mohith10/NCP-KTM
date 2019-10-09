@@ -44,7 +44,7 @@
 	            <li class="nav-item"><a href="Customize_Package_AboutUs.jsp" class="nav-link">About</a></li>
 	            <li class="nav-item active"><a href="Customize_Package_Contact.jsp" class="nav-link">Contact</a></li>
 			    <li class="nav-item"><a href="Customize_Package_Profile.jsp" class="nav-link">Hello, <%= session.getAttribute( "theName" ) %></a></li>
-	        </ul>
+	        <li class="nav-item "><a href="Login_Page.html" class="nav-link">Logout</a></li> </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -72,7 +72,7 @@
             <p><span>Address:</span> Amrita school of Engineering, Kollam, India</p>
           </div>
           <div class="col-md-3">
-            <p><span>Phone:</span> <a href="#">+91 XXXX XXXX XX</a></p>
+            <p><span>Phone:</span> <a href="#">+91 9447 6433 80</a></p>
           </div>
           <div class="col-md-3">
             <p><span>Email:</span> <a href="#">net-centric@amrita.com</a></p>
@@ -83,21 +83,12 @@
         </div>
         <div class="row block-9">
           <div class="col-md-6 order-md-last pr-md-5">
-            <form action="#">
+            <form action="Feedback_Store.jsp">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input  name="feedback" cols="30" rows="7" class="form-control" placeholder="Write Your Feedback"></textarea>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
-              </div>
-              <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
-              </div>
-              <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                <input type="submit" value="Send Feedback" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           

@@ -44,7 +44,7 @@
 	            <li class="nav-item"><a href="Customize_Package_AboutUs.jsp" class="nav-link">About</a></li>
 	            <li class="nav-item"><a href="Customize_Package_Contact.jsp" class="nav-link">Contact</a></li>
 			    <li class="nav-item"><a href="Customize_Package_Profile.jsp" class="nav-link">Hello, <%= session.getAttribute( "theName" ) %></a></li>
-	        </ul>
+	        <li class="nav-item "><a href="Login_Page.html" class="nav-link">Logout</a></li> </ul>
 	      </div>
 	    </div>
 	  </nav>
@@ -62,43 +62,7 @@
     </div>
 		
 		<section class="ftco-section">
-      <div class="container">
-        <div class="row">
-        	<div class="col-lg-3 sidebar order-md-last ftco-animate">
-        		<div class="sidebar-wrap ftco-animate">
-        			<h3 class="heading mb-4">Find City</h3>
-        			<form action="#">
-        				<div class="fields">
-		              <div class="form-group">
-		                <input type="text" class="form-control" placeholder="Destination, City">
-		              </div>
-		              <div class="form-group">
-		                <div class="select-wrap one-third">
-	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control" placeholder="Keyword search">
-	                      <option value="">Select Location</option>
-	                      <option value="">Kochi</option>
-	                      <option value="">Kozhikode</option>
-	                      <option value="">Trivandrum</option>
-	                      <option value="">Idukki</option>
-	                    </select>
-	                  </div>
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Date from">
-		              </div>
-		              <div class="form-group">
-		                <input type="text" id="checkout_date" class="form-control checkout_date" placeholder="Date to">
-		              </div>
-		              
-		              <div class="form-group">
-		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
-		              </div>
-		            </div>
-	            </form>
-        		</div>
-        		
-          </div><!-- END-->
+     
           <div class="col-lg-9">
           	<div class="row">
           		<div class="col-sm col-md-6 col-lg-4 ftco-animate">
@@ -125,7 +89,7 @@
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> More Info.</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    							<span class="ml-auto"><a href="Hotel1_ForestCanopy.jsp">Book Now</a></span>
     						</p>
     					</div>
     				</div>
@@ -154,7 +118,7 @@
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> More Info</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    							<span class="ml-auto"><a href="Hotel2_MountValley.jsp">Book Now</a></span>
     						</p>
     					</div>
     				</div>
@@ -183,7 +147,7 @@
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> More Info.</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    							<span class="ml-auto"><a href="Hotel3_CrownValley.jsp">Book Now</a></span>
     						</p>
     					</div>
     				</div>
@@ -213,7 +177,7 @@
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> More Info.</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    							<span class="ml-auto"><a href="Hotel4_GreenLeaf.jsp">Book Now</a></span>
     						</p>
     					</div>
     				</div>
@@ -242,7 +206,7 @@
     						<hr>
     						<p class="bottom-area d-flex">
     							<span><i class="icon-map-o"></i> More Info.</span> 
-    							<span class="ml-auto"><a href="#">Book Now</a></span>
+    							<span class="ml-auto"><a href="Hotel5_Paradise_Stay.jsp">Book Now</a></span>
     						</p>
 		    					</div>
 		    				</div>
@@ -272,7 +236,7 @@
 		    						<hr>
 		    						<p class="bottom-area d-flex">
 		    							<span><i class="icon-map-o"></i> More Info.</span> 
-		    							<span class="ml-auto"><a href="#">Visit</a></span>
+		    							<span class="ml-auto"><a href="Hotel6_ScenicStay.jsp">Visit</a></span>
 		    						</p>
 		    					</div>
 		    				</div>
