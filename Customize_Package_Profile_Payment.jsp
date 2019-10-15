@@ -19,6 +19,12 @@ $(document).ready(function(){
 	});
 
 </script>
+<script>
+window.location.hash="no-back-button";
+window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
+window.onhashchange=function(){window.location.hash="no-back-button";}
+</script> 
+
 <style type="text/css">
 .form-style-9{
     max-width: 450px;

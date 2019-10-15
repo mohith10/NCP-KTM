@@ -82,6 +82,12 @@ window.onclick = function(event) {
 
 
 </script>
+<script>
+window.location.hash="no-back-button";
+window.location.hash="Again-No-back-button";//again because google chrome don't insert first hash into history
+window.onhashchange=function(){window.location.hash="no-back-button";}
+</script> 
+
     <title>KTC:Profile</title>
     
     <meta charset="utf-8">
@@ -241,9 +247,10 @@ window.onclick = function(event) {
 				Cookie cookie = new Cookie ("price",res);
 				cookie.setMaxAge(365 * 24 * 60 * 60);
 				response.addCookie(cookie);
+				String sum=rs.getString("sum");
 					
 							%>
-					                <input type="submit" value= "Pay Rs. <%=rs.getString("sum") %> " class="form-control btn btn-primary">
+					                <input type="submit" value= "Pay Rs. <%out.print(sum); %> " class="form-control btn btn-primary">
 					              <%
 						con.close();
 							} catch (Exception e) {

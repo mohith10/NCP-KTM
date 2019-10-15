@@ -16,7 +16,10 @@
                         String url = "jdbc:mysql://localhost:3306/ktmdatabase" ;
                         String username = "root" ;
                         String password = "root" ; 
-                        boolean flag=name.equals("admin");
+                        int flag;
+                        if(name.equals("Admin"))
+                        	flag=1;
+                        else flag=0;
                         Class.forName("com.mysql.jdbc.Driver");
                         Connection con = DriverManager.getConnection(url,username,password);
                         Statement st = con.createStatement() ;
@@ -35,9 +38,11 @@
                             rs2.next();
                             String pass=rs2.getString(1);
                             out.print(pass);
-                        	if(flag && enter_pass.equals(pass))
+                        	if(flag==1 && enter_pass.equals(pass))
                         	{
-                        		response.sendRedirect("Login_Page_Admin.jsp");
+                        		RequestDispatcher rd=request.getRequestDispatcher("Customize_Package_Admin.jsp");  
+                                rd.forward(request, response);  
+                        		//response.sendRedirect("Customize_Package_Admin.jsp");
                         	}
                         	else if(enter_pass.equals(pass))
                         	{

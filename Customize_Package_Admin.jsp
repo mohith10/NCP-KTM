@@ -235,13 +235,12 @@ window.onclick = function(event) {
               	
               	 <% 
 		              try{	
-		            	 String name=(String)session.getAttribute( "theName" );
-		             	name = name.substring(0, 1).toUpperCase() + name.substring(1);
+		            	
               	 		int flag2=1;
               	 		String url = "jdbc:mysql://localhost:3306/ktmdatabase" ;
               	 		String username = "root" ;
               	 		String password = "root" ; 
-                         String query2="select username,place, date_from, date_to, members, price from booking where username='"+name+"' and buy="+flag2+"";
+                         String query2="select username,place, date_from, date_to, members, price from booking where buy='1' ";
                       
                         Class.forName("com.mysql.jdbc.Driver");
                         Connection con = DriverManager.getConnection(url,username,password);
